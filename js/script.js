@@ -23,35 +23,47 @@ project 1 - A Random Quote Generator
 
 
 
-var Quotes = [ 
+var Quotes=[
+
 {
-Quote: “So many books, so little time.”,
-source: "http://www.helgeoveras.com/zappa.shtml)",
-Name : "Frank Zappa",
-Year: "unknown",
-}
+quote: 'so many books, so little time',
+source: 'wwww.quotes.yourdictionary.com',
+citation: 'Frank Zappa',
+year: '1990',
+},
 
-Quote: “Be the change that you wish to see in the world.”, 
-Source: "http://www.mkgandhi.org/",
-Name: "Mahatma Gandhi",
-Year: "1921",
+{
+quote: 'Be the cahnge that you wish to see in the world .',
+source: 'www.mkgandhi.org',
+citation: 'Mahatma Ganghi',
+year: '1921',
+},
 
-Quote: "The only thing we have to fear is fear itself.",
-Source : "https://www.brainyquote.com",
-Name: "Franklin D. Roosevelt",
-Year: "1945",
+{
+quote: 'The only thing we have to fear is fear itself.',
+source: 'www.brainyquote.com',
+citation: 'Franklin D. Roosevelt',
+year:'1945',
+},
 
-Quote: "Learning never exhausts the mind.",
-Source: "https://www.brainyquote.com",
-Name: "Leonardo da Vinci",
-Year: "1519",
+{
+quote: 'Learning never exhausts the mind.',
+source: 'https://www.brainyquote.com',
+citation: 'Leonardo da Vinci',
+year: '1519',
+},
 
-Quote: "Live as if you were to die tomorrow. Learn asif you were to live forever.",
-Name: "Mahatma Gandhi",
-Source: "https://www.brainyquote.com",
-Year: "1948",
+
+{
+quote: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
+source: 'https://wwww.brainyquote.com',
+citation: 'Mahatma Gandhi',
+year: '1948',
+},
 
 ]
+
+
 
 
 /***
