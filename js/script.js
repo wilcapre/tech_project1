@@ -64,13 +64,12 @@ year: '1948',
 ]
 
 
-
-
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number 
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
+
 
 /*
   Function getRandomQuote from quote_one to quote_five
@@ -79,7 +78,13 @@ year: '1948',
   print quotes " quotes display with author's name"
 */
   
+function getRandomQuote () {
 
+
+var randomQuote = Math.floor(math.random() * quote);
+ return (randomQuote);
+
+}
 
 
 /***
@@ -95,7 +100,17 @@ year: '1948',
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
+function printQuote(){
 
+var getRandomQuote = Quotes();
+
+return random1  ();
+return random2  ();
+return random3  ();
+return random4  ();
+return random5  ();
+
+}
 
 
 /***
