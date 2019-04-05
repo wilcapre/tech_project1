@@ -7,7 +7,7 @@ project 1 - A Random Quote Generator
 
 
 /*
- This program will reqquest students to get quotes to print out output.  
+ This program will require students to get quotes to print out output.  
  Quotes are taking from different sites, also needs to provide with names,
  provide with their webpages and provide with year it was written.
  */
@@ -20,28 +20,32 @@ var quotes=[
 quote: 'so many books, so little time',
 source: 'wwww.quotes.yourdictionary.com',
 citation: 'Frank Zappa',
-year: '1990'
+year: '1990',
+category: 'memoir'
 },
 
 {
 quote: 'Be the change that you wish to see in the world .',
 source: 'www.mkgandhi.org',
 citation: 'Mahatma Ganghi',
-year: '1921'
+year: '1921',
+category: 'Inspirational'
 },
 
 {
 quote: 'The only thing we have to fear is fear itself.',
 source: 'www.brainyquote.com',
 citation: 'Franklin D. Roosevelt',
-year:'1945'
+year:'1945',
+category: 'Inspirational'
 },
 
 {
 quote: 'Learning never exhausts the mind.',
 source: 'https://www.brainyquote.com',
 citation: 'Leonardo da Vinci',
-year: '1519'
+year: '1519',
+category: 'Inspirational'
 },
 
 
@@ -49,7 +53,8 @@ year: '1519'
 quote: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
 source: 'https://wwww.brainyquote.com',
 citation: 'Mahatma Gandhi',
-year: '1948'
+year: '1948',
+category: 'Inspirational'
 }
 
 ];
@@ -87,7 +92,10 @@ var elements = "";
 
 
 elements += '<p class = "quote" >' + list.quote + "</p>";
-elements += '<p class= "source" >' + list.source;
+elements += '<p class= "citation" >' + list.citation;
+if (quotes.source) {
+  elements += '<span class="source">' + list.source+ "</span>";
+}
 if (quotes.citation ) {
   elements += '<span class="citation">' + list.citation + "</span>";
 }
@@ -105,11 +113,38 @@ quoteOuput.innerHTML = elements;
 
 
 /***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
+  This section finishing up the project by showing different background.
+  When the quote changes, randomly change the background color of the page.
 ***/
+
+var html = '';
+var prbcolors;
+
+function randomPRB() {
+  return Math.floor(Math.random() * 256);
+}
+
+function randomcolors() {
+  var color = 'prb(';
+  color += randomPRB(); + ',';
+  color += randomPRB(); + ',';
+  color += randomPRB(); + ')';
+
+  return color;
+}
+
+function print(message) {
+  document.write(message);
+
+}
+  for (var i = 0; i < 100; i += 1){
+
+  allcolors = randomPRB();
+  html += '<div style="background-color:' + allcolors + '"></div>';
+ 
+}
+
+print(html);
 
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
