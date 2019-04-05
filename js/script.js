@@ -23,34 +23,34 @@ project 1 - A Random Quote Generator
 
 
 
-var Quotes=[
+var quotes=[
 
 {
 quote: 'so many books, so little time',
 source: 'wwww.quotes.yourdictionary.com',
 citation: 'Frank Zappa',
-year: '1990',
+year: '1990'
 },
 
 {
-quote: 'Be the cahnge that you wish to see in the world .',
+quote: 'Be the change that you wish to see in the world .',
 source: 'www.mkgandhi.org',
 citation: 'Mahatma Ganghi',
-year: '1921',
+year: '1921'
 },
 
 {
 quote: 'The only thing we have to fear is fear itself.',
 source: 'www.brainyquote.com',
 citation: 'Franklin D. Roosevelt',
-year:'1945',
+year:'1945'
 },
 
 {
 quote: 'Learning never exhausts the mind.',
 source: 'https://www.brainyquote.com',
 citation: 'Leonardo da Vinci',
-year: '1519',
+year: '1519'
 },
 
 
@@ -58,10 +58,10 @@ year: '1519',
 quote: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
 source: 'https://wwww.brainyquote.com',
 citation: 'Mahatma Gandhi',
-year: '1948',
-},
+year: '1948'
+}
 
-]
+];
 
 
 /***
@@ -81,11 +81,11 @@ year: '1948',
 function getRandomQuote () {
 
 
-var randomQuote = Math.floor(math.random() * quote);
- return (randomQuote);
+  var randomQuote = Math.floor(Math.random() * quotes.length);
+  return quotes[randomQuote]
 
 }
-
+console.log(getRandomQuote());
 
 /***
   Create the `printQuote` function to: 
@@ -100,16 +100,30 @@ var randomQuote = Math.floor(math.random() * quote);
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
-function printQuote(){
 
-var getRandomQuote = Quotes();
+function printQuote (){
 
-return random1  ();
-return random2  ();
-return random3  ();
-return random4  ();
-return random5  ();
 
+var list = getRandomQuote ();
+
+var elements = "";
+
+
+elements += '<p class = "quote" >' + list.quote + "</p>";
+elements += '<p class= "source" >' + list.source;
+if (quotes.citation ) {
+  elements += '<span class="citation">' + list.citation + "</span>";
+}
+if (quotes.year ) {
+  elements += '<span class="year">' + list.year +  "</span>";
+
+}
+elements += "</p>";
+
+
+var quoteOuput = document.getElementById("quote-box"); 
+quoteOuput.innerHTML = elements;
+console.log ();
 }
 
 
@@ -119,6 +133,7 @@ return random5  ();
   function. So do not make any changes to the line of code below this 
   comment.
 ***/
+
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
