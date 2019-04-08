@@ -18,32 +18,32 @@ var quotes=[
 
 {
 quote: 'so many books, so little time',
-source: 'wwww.quotes.yourdictionary.com',
-citation: 'Frank Zappa',
+citation: 'wwww.quotes.yourdictionary.com',
+source: 'Frank Zappa',
 year: '1990',
 category: 'memoir'
 },
 
 {
 quote: 'Be the change that you wish to see in the world .',
-source: 'www.mkgandhi.org',
-citation: 'Mahatma Ganghi',
+citation:'www.mkgandhi.org',
+source: 'Mahatma Ganghi',
 year: '1921',
 category: 'Inspirational'
 },
 
 {
 quote: 'The only thing we have to fear is fear itself.',
-source: 'www.brainyquote.com',
-citation: 'Franklin D. Roosevelt',
+citation: 'www.brainyquote.com',
+source: 'Franklin D. Roosevelt',
 year:'1945',
 category: 'Inspirational'
 },
 
 {
 quote: 'Learning never exhausts the mind.',
-source: 'https://www.brainyquote.com',
-citation: 'Leonardo da Vinci',
+citation: 'https://www.brainyquote.com',
+source: 'Leonardo da Vinci',
 year: '1519',
 category: 'Inspirational'
 },
@@ -51,8 +51,8 @@ category: 'Inspirational'
 
 {
 quote: 'Live as if you were to die tomorrow. Learn as if you were to live forever.',
-source: 'https://wwww.brainyquote.com',
-citation: 'Mahatma Gandhi',
+citation:'https://wwww.brainyquote.com',
+source: 'Mahatma Gandhi',
 year: '1948',
 category: 'Inspirational'
 }
@@ -92,10 +92,8 @@ var elements = "";
 
 
 elements += '<p class = "quote" >' + list.quote + "</p>";
-elements += '<p class= "citation" >' + list.citation;
-if (quotes.source) {
-  elements += '<span class="source">' + list.source+ "</span>";
-}
+elements += '<p class= "source >' + list.source;
+
 if (quotes.citation ) {
   elements += '<span class="citation">' + list.citation + "</span>";
 }
