@@ -21,7 +21,7 @@ quote: 'so many books, so little time',
 citation: 'wwww.quotes.yourdictionary.com',
 source: 'Frank Zappa',
 year: '1990',
-category: 'memoir'
+category: 'education'
 },
 
 {
@@ -92,7 +92,7 @@ var elements = "";
 
 
 elements += '<p class = "quote" >' + list.quote + "</p>";
-elements += '<p class= "source >' + list.source;
+elements += '<p class= "source >' + list.source + "</p>";
 
 if (quotes.citation ) {
   elements += '<span class="citation">' + list.citation + "</span>";
